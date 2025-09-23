@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hugo Gabrielidis - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="#home">Hugo Gabrielidis</a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1>Welcome to My Portfolio</h1>
+                    <h2>I'm a <span class="highlight">PhD Student & ML Researcher</span></h2>
+                    <p>Advancing machine learning and AI for next-generation applications</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/Diffusion model.png" alt="Hugo Gabrielidis" class="profile-photo">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Hi, I'm Hugo Gabrielidis</h3>
+                        <p>I'm a PhD Student at CentraleSupélec/Paris-Saclay, specializing in high-performance machine learning and data analysis for next-generation railway design. My research focuses on Railway Point Cloud segmentation using semi-supervised learning and seismic signals super-resolution with Diffusion Transformers.</p>
+                        <p>With experience as a Machine Learning Researcher at Orange Innovation, I have worked extensively with Federated Learning, establishing benchmarks and exploring the benefits of distributed machine learning approaches. I'm passionate about advancing AI technologies and their practical applications.</p>
+
+                        <div class="skills">
+                            <h4>Technical Skills</h4>
+                            <div class="skills-grid">
+                                <div class="skill-item">Python</div>
+                                <div class="skill-item">Machine Learning</div>
+                                <div class="skill-item">Deep Learning</div>
+                                <div class="skill-item">PyTorch</div>
+                                <div class="skill-item">TensorFlow</div>
+                                <div class="skill-item">Computer Vision</div>
+                                <div class="skill-item">NLP</div>
+                                <div class="skill-item">Data Analysis</div>
+                                <div class="skill-item">PostgreSQL</div>
+                                <div class="skill-item">Docker</div>
+                                <div class="skill-item">GCP/AWS</div>
+                                <div class="skill-item">Git</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-details">
+                        <div class="detail-card">
+                            <h4>Education</h4>
+                            <p>PhD Student at CentraleSupélec/Paris-Saclay</p>
+                            <p>M.Eng Computer Science - University of Cincinnati (GPA: 4.0)</p>
+                            <p>M.Eng Computer Engineering - ENSEM Nancy (GPA: 3.8)</p>
+                        </div>
+                        <div class="detail-card">
+                            <h4>Experience</h4>
+                            <p>PhD Student & Researcher (2022-Present)</p>
+                            <p>ML Research Intern at Orange Innovation (2022)</p>
+                        </div>
+                        <div class="detail-card">
+                            <h4>Location</h4>
+                            <p>Paris, France</p>
+                        </div>
+                        <div class="detail-card">
+                            <h4>Languages</h4>
+                            <p>French (Native)</p>
+                            <p>English (C2 - IELTS: 7.5/9, TOEIC: 975/990)</p>
+                            <p>German (B1)</p>
+                        </div>
+                        <div class="detail-card">
+                            <h4>Certifications</h4>
+                            <p>Neural Network and Deep Learning</p>
+                            <p>Advanced Computer Vision with TensorFlow</p>
+                            <p>The Complete SQL Bootcamp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">My Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">Railway AI</div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Railway Point Cloud Segmentation</h3>
+                            <p>Pipeline for semantic segmentation of large railway point clouds using semi-supervised learning techniques for next-generation railway design.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Deep Learning</span>
+                                <span class="tech-tag">Computer Vision</span>
+                                <span class="tech-tag">Point Clouds</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/HugoGabrielidis16/" class="project-link">GitHub</a>
+                                <a href="#" class="project-link">Research Paper</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">Seismic AI</div>
+                        </div>
+                        <div class="project-content">
+                            <h3>3D Elastic Wave Super-Resolution</h3>
+                            <p>Physics-based super-resolved simulation of 3D elastic wave propagation using scalable Diffusion Transformers for enhanced seismic signal analysis.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Diffusion Models</span>
+                                <span class="tech-tag">Transformers</span>
+                                <span class="tech-tag">Physics Simulation</span>
+                                <span class="tech-tag">PyTorch</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/HugoGabrielidis16/" class="project-link">GitHub</a>
+                                <a href="#" class="project-link">Research Paper</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">Deep Learning</div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Deep Learning Architecture History</h3>
+                            <p>A comprehensive GitHub repository following the evolution of Deep Learning models based on their original papers. Implementations include AlexNet, ResNet, EfficientNet, YOLO, Transformers, BERT, and Vision Transformers.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">PyTorch</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">Neural Networks</span>
+                                <span class="tech-tag">Computer Vision</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/HugoGabrielidis16/" class="project-link">GitHub Repository</a>
+                                <a href="#" class="project-link">Documentation</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">Kaggle</div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Kaggle Competitions</h3>
+                            <p>Active participant in Kaggle competitions to enhance data science and machine learning engineering skills, working on diverse datasets and real-world challenges.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Data Science</span>
+                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">Feature Engineering</span>
+                                <span class="tech-tag">Model Evaluation</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.kaggle.com/" target="_blank" class="project-link">View Profile</a>
+                                <a href="https://github.com/HugoGabrielidis16/" class="project-link">Solutions</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="contact-content-centered">
+                    <div class="contact-info">
+                        <p>I'm always interested in new opportunities and collaborations.</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <strong>Email:</strong>
+                                <a href="mailto:hugo.gabrielidis@centralesuepelec.fr">hugo.gabrielidis@centralesuepelec.fr</a>
+                            </div>
+                            <div class="contact-item">
+                                <strong>Phone:</strong>
+                                <a href="tel:+33616941108">+33 6 16 94 11 08</a>
+                            </div>
+                            <div class="contact-item">
+                                <strong>GitHub:</strong>
+                                <a href="https://github.com/HugoGabrielidis16/" target="_blank">github.com/HugoGabrielidis16</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Hugo Gabrielidis. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://github.com/HugoGabrielidis16/" target="_blank" class="social-link">GitHub</a>
+                    <a href="mailto:hugo.gabrielidis@centralesuepelec.fr" class="social-link">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
