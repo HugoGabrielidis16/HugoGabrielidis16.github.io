@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Point Cloud Segmentation for Railway Infrastructure - Hugo Gabrielidis</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="../index.html">Hugo Gabrielidis</a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="../index.html#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html#projects" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../articles.html" class="nav-link">Thoughts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <article class="article-content">
+            <div class="article-container">
+                <header class="article-page-header">
+                    <a href="../articles.html" class="back-link">← Back to Thoughts</a>
+                    <h1>Understanding Point Cloud Segmentation for Railway Infrastructure</h1>
+                    <div class="article-page-meta">
+                        <span class="article-date">December 2024</span>
+                        <div class="article-tags">
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">Point Clouds</span>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="article-body">
+                    <h2>Introduction</h2>
+                    <p>
+                        Point cloud segmentation is revolutionizing how we analyze railway infrastructure. As part of my PhD research at CentraleSupélec, I've been developing advanced techniques for semantic segmentation of large-scale railway point clouds using semi-supervised learning.
+                    </p>
+
+                    <h2>The Challenge</h2>
+                    <p>
+                        Railway infrastructure generates massive amounts of 3D point cloud data through LiDAR scanning. A single railway corridor can contain billions of points, each representing a precise spatial measurement. The challenge lies in automatically identifying and classifying different components: rails, sleepers, ballast, vegetation, and infrastructure elements.
+                    </p>
+
+                    <h3>Key Technical Challenges</h3>
+                    <ul>
+                        <li><strong>Scale:</strong> Processing point clouds with millions to billions of points</li>
+                        <li><strong>Labeling Cost:</strong> Manual annotation is extremely time-consuming and expensive</li>
+                        <li><strong>Class Imbalance:</strong> Railway components vary drastically in size and frequency</li>
+                        <li><strong>Real-time Requirements:</strong> Infrastructure monitoring needs timely analysis</li>
+                    </ul>
+
+                    <h2>Semi-Supervised Learning Approach</h2>
+                    <p>
+                        Traditional supervised learning requires extensive labeled data. For large-scale point clouds, this becomes prohibitively expensive. Semi-supervised learning offers a solution by leveraging both labeled and unlabeled data.
+                    </p>
+
+                    <p>
+                        Our approach combines:
+                    </p>
+                    <ul>
+                        <li>Transformer-based architectures for capturing long-range dependencies in 3D space</li>
+                        <li>Pseudo-labeling strategies that progressively expand the training set</li>
+                        <li>Consistency regularization to ensure robust predictions</li>
+                        <li>Multi-scale feature extraction to handle objects of varying sizes</li>
+                    </ul>
+
+                    <h2>Results and Impact</h2>
+                    <p>
+                        Our pipeline achieves competitive performance using only 10% labeled data compared to fully supervised methods. This dramatic reduction in labeling requirements makes automated railway monitoring more practical and cost-effective.
+                    </p>
+
+                    <p>
+                        The implications extend beyond railways. These techniques can be applied to:
+                    </p>
+                    <ul>
+                        <li>Urban infrastructure mapping</li>
+                        <li>Autonomous vehicle perception</li>
+                        <li>Industrial facility monitoring</li>
+                        <li>Archaeological site documentation</li>
+                    </ul>
+
+                    <h2>Future Directions</h2>
+                    <p>
+                        The field of point cloud segmentation is rapidly evolving. Emerging areas include:
+                    </p>
+                    <ul>
+                        <li>Foundation models pre-trained on diverse 3D data</li>
+                        <li>Active learning strategies to select the most informative samples for labeling</li>
+                        <li>Integration with multimodal data (RGB images, thermal imaging)</li>
+                        <li>Real-time processing on edge devices</li>
+                    </ul>
+
+                    <h2>Conclusion</h2>
+                    <p>
+                        Point cloud segmentation represents a critical technology for next-generation railway design and monitoring. By reducing the reliance on labeled data through semi-supervised learning, we're making these powerful techniques more accessible and practical for real-world deployment.
+                    </p>
+                </div>
+
+                <footer class="article-footer">
+                    <a href="../articles.html" class="back-link">← Back to Thoughts</a>
+                </footer>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Hugo Gabrielidis. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://github.com/HugoGabrielidis16/" target="_blank" class="social-link">GitHub</a>
+                    <a href="mailto:hugo.gabrielidis@centralesuepelec.fr" class="social-link">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

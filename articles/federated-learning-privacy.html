@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Federated Learning: Balancing Privacy and Performance - Hugo Gabrielidis</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="../index.html">Hugo Gabrielidis</a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="../index.html#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html#projects" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../articles.html" class="nav-link">Thoughts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <article class="article-content">
+            <div class="article-container">
+                <header class="article-page-header">
+                    <a href="../articles.html" class="back-link">← Back to Thoughts</a>
+                    <h1>Federated Learning: Balancing Privacy and Performance</h1>
+                    <div class="article-page-meta">
+                        <span class="article-date">October 2024</span>
+                        <div class="article-tags">
+                            <span class="tag">Federated Learning</span>
+                            <span class="tag">Privacy</span>
+                            <span class="tag">Machine Learning</span>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="article-body">
+                    <h2>Introduction</h2>
+                    <p>
+                        During my research internship at Orange Innovation, I dove deep into federated learning—a paradigm that promises to train powerful machine learning models while keeping sensitive data private. This article explores the fascinating trade-offs between privacy preservation and model performance that I encountered.
+                    </p>
+
+                    <h2>What is Federated Learning?</h2>
+                    <p>
+                        Traditional machine learning centralizes data: collect everything in one place, train a model, deploy. Federated learning flips this on its head. Instead of moving data to the model, we move the model to the data.
+                    </p>
+
+                    <h3>The Basic Process</h3>
+                    <ol>
+                        <li>A central server initializes a global model</li>
+                        <li>The model is sent to multiple clients (phones, hospitals, companies)</li>
+                        <li>Each client trains on their local data</li>
+                        <li>Clients send only model updates (not data) back to the server</li>
+                        <li>The server aggregates updates to improve the global model</li>
+                        <li>Repeat until convergence</li>
+                    </ol>
+
+                    <h2>The Privacy-Performance Trade-off</h2>
+                    <p>
+                        Federated learning sounds perfect: privacy-preserving and powerful. But reality is more nuanced. My research at Orange focused on benchmarking this trade-off across various scenarios.
+                    </p>
+
+                    <h3>Privacy Challenges</h3>
+                    <p>
+                        Even without sharing raw data, federated learning faces privacy risks:
+                    </p>
+                    <ul>
+                        <li><strong>Gradient Leakage:</strong> Model updates can leak information about training data</li>
+                        <li><strong>Model Inversion:</strong> Attackers can reconstruct training samples from model parameters</li>
+                        <li><strong>Membership Inference:</strong> Determining if a specific sample was in the training set</li>
+                    </ul>
+
+                    <h3>Performance Challenges</h3>
+                    <p>
+                        Distributing learning comes with costs:
+                    </p>
+                    <ul>
+                        <li><strong>Non-IID Data:</strong> Each client's data distribution may differ significantly</li>
+                        <li><strong>Communication Overhead:</strong> Frequent model exchanges can be bandwidth-intensive</li>
+                        <li><strong>Straggler Problem:</strong> Slow clients delay the entire training process</li>
+                        <li><strong>Convergence Speed:</strong> Federated training typically requires more rounds than centralized training</li>
+                    </ul>
+
+                    <h2>Differential Privacy: A Solution with Costs</h2>
+                    <p>
+                        Differential privacy provides mathematical guarantees that individual data points cannot be identified. We add carefully calibrated noise to model updates before sharing them.
+                    </p>
+
+                    <h3>The Trade-off in Practice</h3>
+                    <p>
+                        Our benchmarks revealed:
+                    </p>
+                    <ul>
+                        <li>Stronger privacy (more noise) → Lower model accuracy</li>
+                        <li>Image classification: 3-7% accuracy drop with strong privacy guarantees</li>
+                        <li>Natural language tasks: Even larger degradation due to high-dimensional parameter spaces</li>
+                        <li>The privacy budget (ε) is crucial: ε=1 offers strong privacy but significant performance loss; ε=10 offers weaker privacy but better performance</li>
+                    </ul>
+
+                    <h2>Strategies to Improve the Trade-off</h2>
+                    <p>
+                        Our research explored several approaches to get better privacy AND performance:
+                    </p>
+
+                    <h3>1. Secure Aggregation</h3>
+                    <p>
+                        Cryptographic protocols that allow the server to compute aggregate updates without seeing individual client contributions. Privacy without adding noise!
+                    </p>
+
+                    <h3>2. Personalization</h3>
+                    <p>
+                        Instead of a single global model, allow clients to fine-tune their local models. This improves performance on non-IID data while maintaining privacy.
+                    </p>
+
+                    <h3>3. Adaptive Privacy Budgets</h3>
+                    <p>
+                        Allocate different privacy budgets to different parameters or training rounds. Critical parameters get more privacy protection; less sensitive ones get less noise.
+                    </p>
+
+                    <h3>4. Knowledge Distillation</h3>
+                    <p>
+                        Transfer knowledge from a large teacher model to a smaller student model. The student can be trained with stronger privacy guarantees while maintaining reasonable performance.
+                    </p>
+
+                    <h2>Real-World Applications</h2>
+                    <p>
+                        Our findings have implications across industries:
+                    </p>
+                    <ul>
+                        <li><strong>Healthcare:</strong> Hospitals can collaboratively train diagnostic models without sharing patient data</li>
+                        <li><strong>Finance:</strong> Banks can detect fraud patterns while protecting customer information</li>
+                        <li><strong>Mobile Devices:</strong> Improve keyboard predictions and voice recognition using data from millions of phones</li>
+                        <li><strong>Telecommunications:</strong> Network optimization without exposing user behavior</li>
+                    </ul>
+
+                    <h2>Lessons Learned</h2>
+                    <p>
+                        After extensive benchmarking, several key insights emerged:
+                    </p>
+                    <ol>
+                        <li><strong>Context Matters:</strong> The right privacy-performance balance depends on your application</li>
+                        <li><strong>No Free Lunch:</strong> Strong privacy guarantees always cost something—accept and optimize</li>
+                        <li><strong>Hybrid Approaches Work:</strong> Combining multiple techniques (secure aggregation + personalization) yields better results than any single method</li>
+                        <li><strong>Communication is Critical:</strong> In many scenarios, communication overhead matters more than computation time</li>
+                    </ol>
+
+                    <h2>The Future of Federated Learning</h2>
+                    <p>
+                        The field is rapidly evolving. Exciting directions include:
+                    </p>
+                    <ul>
+                        <li>Federated learning with foundation models (think GPT-4 trained federatively)</li>
+                        <li>Cross-device and cross-silo federated learning working together</li>
+                        <li>Verifiable federated learning (proving models were trained as claimed)</li>
+                        <li>Federated learning on blockchain for transparency and trust</li>
+                    </ul>
+
+                    <h2>Conclusion</h2>
+                    <p>
+                        Federated learning represents a fundamental shift in how we think about machine learning. It's not just a technical solution—it's a new social contract between data owners and model builders.
+                    </p>
+
+                    <p>
+                        The privacy-performance trade-off is real, but it's not insurmountable. With careful design, thoughtful privacy budgets, and the right combination of techniques, we can build powerful models that respect privacy.
+                    </p>
+
+                    <p>
+                        As regulations like GDPR make data privacy non-negotiable, federated learning will transition from a research curiosity to a practical necessity. The question isn't whether to adopt it, but how to optimize it for your specific needs.
+                    </p>
+                </div>
+
+                <footer class="article-footer">
+                    <a href="../articles.html" class="back-link">← Back to Thoughts</a>
+                </footer>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Hugo Gabrielidis. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://github.com/HugoGabrielidis16/" target="_blank" class="social-link">GitHub</a>
+                    <a href="mailto:hugo.gabrielidis@centralesuepelec.fr" class="social-link">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

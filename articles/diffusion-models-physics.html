@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diffusion Models Meet Physics - Hugo Gabrielidis</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="../index.html">Hugo Gabrielidis</a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="../index.html#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html#projects" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../articles.html" class="nav-link">Articles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <article class="article-content">
+            <div class="article-container">
+                <header class="article-page-header">
+                    <a href="../articles.html" class="back-link">← Back to Thoughts</a>
+                    <h1>Diffusion Models Meet Physics: Super-Resolution for Seismic Signals</h1>
+                    <div class="article-page-meta">
+                        <span class="article-date">November 2024</span>
+                        <div class="article-tags">
+                            <span class="tag">Diffusion Models</span>
+                            <span class="tag">Transformers</span>
+                            <span class="tag">Physics Simulation</span>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="article-body">
+                    <h2>Introduction</h2>
+                    <p>
+                        Diffusion models have taken the AI world by storm, primarily in image and video generation. But what happens when we apply these powerful generative models to physics simulations? In my research on 3D elastic wave propagation, I'm exploring how Diffusion Transformers can dramatically enhance the resolution of seismic signal simulations.
+                    </p>
+
+                    <h2>The Physics Problem</h2>
+                    <p>
+                        Seismic wave propagation is fundamental to understanding earthquakes, exploring subsurface resources, and designing resilient infrastructure. High-resolution 3D simulations provide crucial insights, but they come with a significant computational cost.
+                    </p>
+
+                    <h3>The Computational Challenge</h3>
+                    <p>
+                        Traditional finite element methods for 3D elastic wave propagation scale poorly with resolution. Doubling the spatial resolution requires approximately 16× more computational resources (2³ in space × 2 in time). For large-scale simulations, this becomes prohibitive.
+                    </p>
+
+                    <h2>Enter Diffusion Transformers</h2>
+                    <p>
+                        Diffusion models learn to gradually denoise random noise into structured data. By training on pairs of low-resolution and high-resolution simulations, we can teach the model to "fill in" the missing high-frequency details.
+                    </p>
+
+                    <h3>Why Transformers?</h3>
+                    <p>
+                        Traditional convolutional neural networks struggle with long-range dependencies in 3D space. Transformers, with their attention mechanisms, can capture how wave propagation in one region affects distant locations. This is crucial for physically accurate super-resolution.
+                    </p>
+
+                    <h2>Physics-Informed Learning</h2>
+                    <p>
+                        The key innovation is incorporating physical constraints into the learning process:
+                    </p>
+                    <ul>
+                        <li><strong>Energy Conservation:</strong> Ensuring the total wave energy remains consistent</li>
+                        <li><strong>Wave Equation Compliance:</strong> Penalizing solutions that violate fundamental physics</li>
+                        <li><strong>Boundary Conditions:</strong> Respecting material interfaces and simulation boundaries</li>
+                        <li><strong>Temporal Consistency:</strong> Maintaining smooth evolution across time steps</li>
+                    </ul>
+
+                    <h2>Results and Performance</h2>
+                    <p>
+                        Our Diffusion Transformer approach achieves:
+                    </p>
+                    <ul>
+                        <li>4× spatial super-resolution with high fidelity</li>
+                        <li>90% reduction in computational time compared to direct high-resolution simulation</li>
+                        <li>Physically plausible results that respect conservation laws</li>
+                        <li>Robust generalization to unseen source configurations</li>
+                    </ul>
+
+                    <h2>Broader Implications</h2>
+                    <p>
+                        This work demonstrates that modern generative AI can be successfully integrated with classical physics simulations. The approach extends to:
+                    </p>
+                    <ul>
+                        <li>Fluid dynamics (turbulence modeling)</li>
+                        <li>Climate modeling (downscaling global models to regional scales)</li>
+                        <li>Molecular dynamics (accelerating protein folding simulations)</li>
+                        <li>Electromagnetics (antenna design and radar simulation)</li>
+                    </ul>
+
+                    <h2>Challenges and Future Work</h2>
+                    <p>
+                        Despite promising results, several challenges remain:
+                    </p>
+                    <ul>
+                        <li><strong>Generalization:</strong> Ensuring the model works across different geological structures</li>
+                        <li><strong>Uncertainty Quantification:</strong> Providing confidence intervals on predictions</li>
+                        <li><strong>Scalability:</strong> Handling even larger 3D domains efficiently</li>
+                        <li><strong>Interactive Simulation:</strong> Enabling real-time adjustments during generation</li>
+                    </ul>
+
+                    <h2>Conclusion</h2>
+                    <p>
+                        The marriage of diffusion models and physics simulation represents an exciting frontier in scientific machine learning. By respecting physical laws while leveraging the power of modern generative models, we can make previously intractable simulations practical and accessible.
+                    </p>
+
+                    <p>
+                        As we continue to push the boundaries of what's possible, I'm optimistic that these techniques will enable breakthroughs in fields ranging from seismology to climate science.
+                    </p>
+                </div>
+
+                <footer class="article-footer">
+                    <a href="../articles.html" class="back-link">← Back to Thoughts</a>
+                </footer>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Hugo Gabrielidis. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://github.com/HugoGabrielidis16/" target="_blank" class="social-link">GitHub</a>
+                    <a href="mailto:hugo.gabrielidis@centralesuepelec.fr" class="social-link">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
