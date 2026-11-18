@@ -13,7 +13,7 @@ This is a static personal portfolio website for Hugo Gabrielidis, built with van
 - `css/style.css` - Complete styling including responsive design and animations
 - `js/script.js` - Interactive features and DOM manipulation
 - `images/` - Profile photo and project assets
-- `mystuff/` - Contains source materials (Resume_HG.pdf)
+- `mystuff/` - Contains source materials (Resume.pdf)
 
 **Section Layout:**
 The website follows a vertical single-page design with sections:
@@ -56,7 +56,7 @@ npx serve .
 - Profile photo styling with circular crop and shadow effects
 
 **Personal Content:**
-- All personal information is populated from Resume_HG.pdf
+- All personal information is populated from Resume.pdf
 - Contact section uses real contact information
 - Project cards reflect actual research work and GitHub repositories
 
