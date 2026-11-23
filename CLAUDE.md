@@ -4,23 +4,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a static personal portfolio website for Hugo Gabrielidis, built with vanilla HTML, CSS, and JavaScript. The site showcases his background as a PhD student and ML researcher at CentraleSupélec/Paris-Saclay.
+This is a static personal website for Hugo Gabrielidis, built with plain HTML and CSS (no JavaScript, no build step). Hugo is an AI Scientist at cortAIx Labs, Thales (since September 2026) and completed his PhD in machine learning at CentraleSupélec / Université Paris-Saclay in February 2026.
 
 ## Architecture
 
-**Single-Page Application Structure:**
-- `index.html` - Main HTML file containing all sections (hero, about, projects, contact)
-- `css/style.css` - Complete styling including responsive design and animations
-- `js/script.js` - Interactive features and DOM manipulation
-- `images/` - Profile photo and project assets
-- `mystuff/` - Contains source materials (Resume.pdf)
+**Single-column "letter" layout:** every page shares one narrow column (~640px), the same top bar (name on the left; Thoughts · CV · Email on the right) and a one-line footer.
 
-**Section Layout:**
-The website follows a vertical single-page design with sections:
-1. **Hero** - Profile photo, name, title, and call-to-action buttons
-2. **About** - Personal bio, technical skills grid, education/experience cards
-3. **Projects** - Grid of research projects and portfolio items
-4. **Contact** - Centered contact information (no form)
+- `index.html` - Home page: portrait, "Hi, I'm Hugo." and a short prose bio with inline links to papers and projects, followed by short lists (Publications, Writing, Elsewhere)
+- `articles.html` - "Thoughts" index listing the articles
+- `articles/*.html` - Individual articles (paths to shared assets use `../`)
+- `css/style.css` - All styling; theme colours and fonts are CSS custom properties in `:root`
+- `images/` - Profile photo and other images
+- `mystuff/` - Source materials (Resume.pdf, linked as the CV)
+
+The header and footer markup is duplicated in every HTML file; keep them in sync when changing them.
 
 ## Development Commands
 
@@ -35,30 +32,18 @@ npx serve .
 **Testing:**
 - Open `index.html` directly in browser for quick testing
 - Use browser developer tools for responsive design testing
-- Test mobile navigation toggle functionality
+- Check narrow widths (below 600px) in the browser's device toolbar
 
 ## Key Implementation Details
 
-**Responsive Design:**
-- Mobile-first approach with breakpoints at 768px and 480px
-- Mobile hamburger menu implemented in JavaScript
-- CSS Grid and Flexbox for adaptive layouts
-
-**Navigation:**
-- Fixed navbar with smooth scrolling to sections
-- Active link highlighting based on scroll position
-- Mobile menu toggle with overlay behavior
-
-**Styling Approach:**
-- CSS custom properties for consistent theming
-- Gradient backgrounds and modern card-based layouts
-- Hover effects and transitions for interactivity
-- Profile photo styling with circular crop and shadow effects
+**Design:**
+- Warm off-white background, Source Serif 4 for headings and prose, Inter for UI text (loaded from Google Fonts with system fallbacks)
+- Single muted green accent for links
+- One breakpoint at 600px; the layout is a single column at all widths, so no mobile menu is needed
 
 **Personal Content:**
-- All personal information is populated from Resume.pdf
-- Contact section uses real contact information
-- Project cards reflect actual research work and GitHub repositories
+- Personal information comes from Resume.pdf and the user's own updates
+- Publication and project links point to the real papers and GitHub repositories
 
 ## Hosting Considerations
 

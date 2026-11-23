@@ -3,296 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hugo Gabrielidis - Portfolio</title>
+    <title>Hugo Gabrielidis</title>
+    <meta name="description" content="Hugo Gabrielidis — AI Scientist at cortAIx Labs, Thales. PhD in machine learning from CentraleSupélec / Université Paris-Saclay.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <a href="#home">Hugo Gabrielidis</a>
-                </div>
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#projects" class="nav-link">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="articles.html" class="nav-link">Thoughts</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link">Contact</a>
-                    </li>
-                </ul>
-                <div class="nav-toggle" id="mobile-menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
+    <header class="site-top">
+        <a class="site-name" href="index.html">Hugo Gabrielidis</a>
+        <nav class="site-links">
+            <a href="articles.html">Thoughts</a>
+            <a href="mystuff/Resume.pdf">CV</a>
+            <a href="mailto:hugo.gabrielidis@centralesupelec.fr">Email</a>
         </nav>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-container">
-                <div class="hero-content">
-                    <h1>Welcome to My Portfolio</h1>
-                    <h2>I'm a <span class="highlight">PhD Student & ML Researcher</span></h2>
-                    <p>Advancing machine learning and AI for next-generation applications</p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">View My Work</a>
-                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                        <a href="mystuff/Resume.pdf" download class="btn btn-secondary">Download Resume</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="images/myself.jpg" alt="Hugo Gabrielidis" class="profile-photo">
-                </div>
-            </div>
+    <main class="page">
+        <img src="images/myself.jpg" alt="Hugo Gabrielidis" class="portrait">
+        <h1>Hi, I'm Hugo.</h1>
+
+        <div class="prose">
+            <p>I'm an AI scientist at cortAIx Labs, Thales, which I joined in September 2026.</p>
+
+            <p>Before that I did a PhD at CentraleSupélec / Université Paris-Saclay, finished in
+            February 2026, on machine learning for next-generation railway design:
+            <a href="https://dl.acm.org/doi/10.1007/978-3-031-77731-8_16">segmenting large railway point clouds</a>
+            with semi-supervised learning, and
+            <a href="https://www.sciencedirect.com/science/article/pii/S001046552500431X">super-resolving 3D seismic wave simulations</a>
+            with Diffusion Transformers. Along the way I also worked on
+            <a href="https://www.sciencedirect.com/science/article/pii/S0957417425025242">artefact reduction in cone-beam CT</a>
+            with generative adversarial networks.</p>
+
+            <p>Earlier, I benchmarked federated learning as a research intern at Orange Innovation,
+            and studied computer science at the University of Cincinnati and computer engineering
+            at ENSEM Nancy. I live in Paris and speak French, English and German.</p>
+
+            <p>On the side, I keep a repository that
+            <a href="https://github.com/HugoGabrielidis16/Architecture_Implementation">re-implements classic deep learning architectures</a>
+            from their original papers, from AlexNet to Vision Transformers, and I once trained a
+            deep Q-learning agent to <a href="https://github.com/HugoGabrielidis16/Mario-RL">play Mario</a>.</p>
+        </div>
+
+        <section>
+            <h2 class="label">Publications</h2>
+            <ul class="entries">
+                <li>
+                    <a href="https://dl.acm.org/doi/10.1007/978-3-031-77731-8_16">Railway Point Cloud Segmentation</a>
+                    <span class="meta"><a href="https://github.com/HugoGabrielidis16/LIDAR/">code</a></span>
+                </li>
+                <li>
+                    <a href="https://www.sciencedirect.com/science/article/pii/S001046552500431X">3D Elastic Wave Super-Resolution with Diffusion Transformers</a>
+                    <span class="meta"><a href="https://github.com/HugoGabrielidis16/Seismic_DiT1D/">code</a></span>
+                </li>
+                <li>
+                    <a href="https://www.sciencedirect.com/science/article/pii/S0957417425025242">Diagnostic performance of artefact-reduced cone-beam CT images using a generative adversarial neural network</a>
+                    <span class="meta"><a href="https://github.com/HugoGabrielidis16/Artefacts/">code</a></span>
+                </li>
+            </ul>
         </section>
 
-        <section id="about" class="about">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <h3>Hi, I'm Hugo Gabrielidis</h3>
-                        <p>I'm a PhD Student at CentraleSupélec/Paris-Saclay, specializing in high-performance machine learning and data analysis for next-generation railway design. My research focuses on Railway Point Cloud segmentation using semi-supervised learning and seismic signals super-resolution with Diffusion Transformers.</p>
-                        <p>With experience as a Machine Learning Researcher at Orange Innovation, I have worked extensively with Federated Learning, establishing benchmarks and exploring the benefits of distributed machine learning approaches. I'm passionate about advancing AI technologies and their practical applications.</p>
-
-                        <div class="skills">
-                            <h4>Technical Skills</h4>
-                            <div class="skills-grid">
-                                <div class="skill-item">Python</div>
-                                <div class="skill-item">Machine Learning</div>
-                                <div class="skill-item">Deep Learning</div>
-                                <div class="skill-item">PyTorch</div>
-                                <div class="skill-item">TensorFlow</div>
-                                <div class="skill-item">Computer Vision</div>
-                                <div class="skill-item">NLP</div>
-                                <div class="skill-item">Data Analysis</div>
-                                <div class="skill-item">PostgreSQL</div>
-                                <div class="skill-item">Docker</div>
-                                <div class="skill-item">Singularity</div>
-                                <div class="skill-item">GCP/AWS</div>
-                                <div class="skill-item">Git</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-details">
-                        <div class="detail-card">
-                            <h4>Education</h4>
-                            <ul>
-                                <li>PhD Student at CentraleSupélec/Paris-Saclay</li>
-                                <li>M.Eng Computer Science - University of Cincinnati (GPA: 4.0)</li>
-                                <li>M.Eng Computer Engineering - ENSEM Nancy (GPA: 3.8)</li>
-                            </ul>
-                        </div>
-                        <div class="detail-card">
-                            <h4>Experience</h4>
-                            <ul>
-                                <li>PhD Student & Researcher at CentraleSupélec/Paris-Saclay (2022-Present)</li>
-                                <li>ML Research Intern at Orange Innovation (2022)</li>
-                            </ul>
-                        </div>
-                        <div class="detail-card">
-                            <h4>Location</h4>
-                            <p>Paris, France</p>
-                        </div>
-                        <div class="detail-card">
-                            <h4>Languages</h4>
-                            <p>French (Native)</p>
-                            <p>English (C2 - IELTS: 7.5/9, TOEIC: 975/990)</p>
-                            <p>German (B1)</p>
-                        </div>
-                        <div class="detail-card">
-                            <h4>Certifications</h4>
-                            <p>Neural Network and Deep Learning</p>
-                            <p>Advanced Computer Vision with TensorFlow</p>
-                            <p>The Complete SQL Bootcamp</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <section>
+            <h2 class="label">Writing</h2>
+            <ul class="entries">
+                <li>
+                    <a href="articles/understanding-point-cloud-segmentation.html">Understanding Point Cloud Segmentation for Railway Infrastructure</a>
+                    <span class="meta">Dec 2024</span>
+                </li>
+                <li>
+                    <a href="articles/diffusion-models-physics.html">Diffusion Models Meet Physics: Super-Resolution for Seismic Signals</a>
+                    <span class="meta">Nov 2024</span>
+                </li>
+                <li>
+                    <a href="articles/federated-learning-privacy.html">Federated Learning: Balancing Privacy and Performance</a>
+                    <span class="meta">Oct 2024</span>
+                </li>
+            </ul>
         </section>
 
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2 class="section-title">My Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <div class="project-placeholder">Thesis Paper</div>
-                        </div>
-                        <div class="project-content">
-                            <h3>Railway Point Cloud Segmentation</h3>
-                            <p>Pipeline for semantic segmentation of large railway point clouds using semi-supervised learning techniques for next-generation railway design.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Deep Learning</span>
-                                <span class="tech-tag">Computer Vision</span>
-                                <span class="tech-tag">Semi-Supervised Learning</span>
-                                <span class="tech-tag">Transformers</span>
-                                <span class="tech-tag">Point Clouds</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/HugoGabrielidis16/LIDAR/" class="project-link">GitHub</a>
-                                <a href="https://dl.acm.org/doi/10.1007/978-3-031-77731-8_16" class="project-link">Research Paper</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <div class="project-placeholder">Thesis Paper</div>
-                        </div>
-                        <div class="project-content">
-                            <h3>3D Elastic Wave Super-Resolution</h3>
-                            <p>Physics-based super-resolved simulation of 3D elastic wave propagation using scalable Diffusion Transformers for enhanced seismic signal analysis.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Diffusion Models</span>
-                                <span class="tech-tag">Transformers</span>
-                                <span class="tech-tag">Physics Simulation</span>
-                                <span class="tech-tag">PyTorch</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/HugoGabrielidis16/Seismic_DiT1D/" class="project-link">GitHub</a>
-                                <a href="https://www.sciencedirect.com/science/article/pii/S001046552500431X" class="project-link">Research Paper</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <div class="project-placeholder">Thesis Subproject Paper</div>
-                        </div>
-                        <div class="project-content">
-                            <h3>Diagnostic performance of artefact-reduced cone-beam CT images using a
-                            generative adversarial neural network</h3>
-                            <p>Implementing a reinforcement learning agent to play Mario using deep Q-learning.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">TensorFlow</span>
-                                <span class="tech-tag">GAN</span>
-                                <span class="tech-tag">Auto-encoder</span>
-                                <span class="tech-tag">Neural Networks</span>
-                                <span class="tech-tag">Medical Imaging</span>
-                                <span class="tech-tag">Computer Vision</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/HugoGabrielidis16/Artefacts/" class="project-link">GitHub Repository</a>
-                                <a href="https://www.sciencedirect.com/science/article/pii/S0957417425025242" class="project-link">Research Paper</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <div class="project-placeholder">Deep Learning</div>
-                        </div>
-                        <div class="project-content">
-                            <h3>Deep Learning Architecture History</h3>
-                            <p>A comprehensive GitHub repository following the evolution of Deep Learning models based on their original papers. Implementations include AlexNet, ResNet, EfficientNet, YOLO, Transformers, BERT, and Vision Transformers.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Numpy</span>
-                                <span class="tech-tag">Deep Learning</span>
-                                <span class="tech-tag">Machine Learning</span>
-                                <span class="tech-tag">Implementation</span>
-                                <span class="tech-tag">Neural Networks</span>
-                                <span class="tech-tag">Computer Vision</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/HugoGabrielidis16/Architecture_Implementation" class="project-link">GitHub Repository</a>
-                                <a href="#" class="project-link">Documentation</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <div class="project-placeholder">Reinforcement Learning Project</div>
-                        </div>
-                        <div class="project-content">
-                            <h3>Mario Reinforcement learning</h3>
-                            <p>Implementing a reinforcement learning agent to play Mario using deep Q-learning.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">PyTorch</span>
-                                <span class="tech-tag">Reinforcement Learning</span>
-                                <span class="tech-tag">Neural Networks</span>
-                                <span class="tech-tag">Computer Vision</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/HugoGabrielidis16/Mario-RL" class="project-link">GitHub Repository</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- <div class="project-card">
-                        <div class="project-image">
-                            <div class="project-placeholder">Kaggle</div>
-                        </div>
-                        <div class="project-content">
-                            <h3>Kaggle Competitions</h3>
-                            <p>Active participant in Kaggle competitions to enhance data science and machine learning engineering skills, working on diverse datasets and real-world challenges.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Data Science</span>
-                                <span class="tech-tag">Machine Learning</span>
-                                <span class="tech-tag">Feature Engineering</span>
-                                <span class="tech-tag">Model Evaluation</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://www.kaggle.com/" target="_blank" class="project-link">View Profile</a>
-                                <a href="https://github.com/HugoGabrielidis16/" class="project-link">Solutions</a>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2 class="section-title">Let's Connect</h2>
-                <div class="contact-content-centered">
-                    <div class="contact-info">
-                        <p>I'm always interested in new opportunities and collaborations.</p>
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <strong>Email:</strong>
-                                <a href="mailto:hugo.gabrielidis@centralesuepelec.fr">hugo.gabrielidis@centralesuepelec.fr</a>
-                            </div>
-                            <div class="contact-item">
-                                <strong>LinkedIn:</strong>
-                                <a href="https://www.linkedin.com/in/hugo-gabrielidis-70289a21b/" target="_blank">https://www.linkedin.com/in/hugo-gabrielidis</a>
-                            </div>
-                            <div class="contact-item">
-                                <strong>GitHub:</strong>
-                                <a href="https://github.com/HugoGabrielidis16/" target="_blank">github.com/HugoGabrielidis16</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <section>
+            <h2 class="label">Elsewhere</h2>
+            <p class="elsewhere">
+                <a href="mailto:hugo.gabrielidis@centralesupelec.fr">Email</a>
+                <a href="https://github.com/HugoGabrielidis16/">GitHub</a>
+                <a href="https://www.linkedin.com/in/hugo-gabrielidis-70289a21b/">LinkedIn</a>
+                <a href="mystuff/Resume.pdf">Resume (PDF)</a>
+            </p>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2024 Hugo Gabrielidis. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="https://github.com/HugoGabrielidis16/" target="_blank" class="social-link">GitHub</a>
-                    <a href="mailto:hugo.gabrielidis@centralesuepelec.fr" class="social-link">Email</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/script.js"></script>
+    <footer class="site-foot">&copy; 2026 Hugo Gabrielidis</footer>
 </body>
 </html>
