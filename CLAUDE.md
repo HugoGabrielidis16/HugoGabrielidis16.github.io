@@ -8,10 +8,11 @@ This is a static personal website for Hugo Gabrielidis, built with plain HTML an
 
 ## Architecture
 
-**Single-column "letter" layout:** every page shares one narrow column (~640px), the same top bar (name on the left; Thoughts · CV · Email on the right) and a one-line footer.
+**Single-column "letter" layout:** every page shares one narrow column (~640px), the same top bar (name on the left; Thoughts · Interests · CV · Email on the right) and a one-line footer.
 
 - `index.html` - Home page: portrait, "Hi, I'm Hugo." and a short prose bio with inline links to papers and projects, followed by short lists (Publications, Writing, Elsewhere)
 - `articles.html` - "Thoughts" index listing the articles
+- `interests.html` - Personal interests page (currently just a title; content to come)
 - `articles/*.html` - Individual articles (paths to shared assets use `../`)
 - `css/style.css` - All styling; theme colours and fonts are CSS custom properties in `:root`
 - `images/` - Profile photo and other images
